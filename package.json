@@ -1,0 +1,14 @@
+{
+  "name": "dockside-inventory-service",
+  "version": "1.8.4",
+  "private": true,
+  "description": "Tracks stock levels and reservations for Dockside Market",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test",
+    "smoke": "node scripts/smoke.js http://localhost:8080"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

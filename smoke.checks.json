@@ -1,0 +1,11 @@
+[
+  { "name": "Health endpoint", "method": "GET", "path": "/health", "expectStatus": 200 },
+  { "name": "Stock lookup for a hot SKU", "method": "GET", "path": "/inventory/SKU-1001", "expectStatus": 200 },
+  {
+    "name": "Reserve stock",
+    "method": "POST",
+    "path": "/inventory/reserve",
+    "body": { "sku": "SKU-1001", "qty": 1 },
+    "expectStatus": 200
+  }
+]
