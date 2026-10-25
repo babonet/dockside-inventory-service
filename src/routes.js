@@ -10,10 +10,7 @@ const routes = [
       const m = path.match(/^\/inventory\/([\w-]+)$/);
       return m ? { sku: m[1] } : null;
     },
-    handler: async ({ params }) => {
-      const stock = getStock(params.sku.toUpperCase());
-      return { status: 200, body: { ...stock, lowStock: stock.available < LOW_STOCK_THRESHOLD } };
-    },
+    handler: async ({ params }) => ({ status: 200, body: getStock(params.sku.toUpperCase()) }),
   },
   {
     method: 'POST',
